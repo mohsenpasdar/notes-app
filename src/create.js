@@ -12,7 +12,7 @@ newElement.addEventListener('click', () => {
     } else {
         createNote({ 
             title: titleElement.value,
-            body: bodyElement.value + 'empty'
+            body: bodyElement.value
         })
         location.assign('/index.html')
     }
