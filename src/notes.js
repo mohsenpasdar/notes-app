@@ -22,20 +22,17 @@ const saveNotes = () => {
 // Expose notes from module
 const getNotes = () => notes
 
-const createNote = () => {
+const createNote = ({ title, body }) => {
     const id = uuidv4()
     const timeStamp = moment().valueOf()
-
     notes.push({
         id,
-        title: '',
-        body: '',
+        title,
+        body,
         createdAt: timeStamp, 
         updatedAt: timeStamp
     })
     saveNotes()
-
-    return id
 }
 
 // Remove a note from the list

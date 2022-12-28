@@ -1,12 +1,11 @@
-import { createNote, loadNotes } from './notes'
+import { loadNotes } from './notes'
 import { setFilters} from './filters'
 import { renderNotes } from './views'
 
 renderNotes()
 
-document.querySelector('#create-note').addEventListener('click', (e) => {
-    const id = createNote()
-    location.assign(`/edit.html#${id}`)
+document.querySelector('#create-note').addEventListener('click', () => {
+    location.assign(`/create.html`)
 })
 
 document.querySelector('#search-text').addEventListener('input', (e) => {

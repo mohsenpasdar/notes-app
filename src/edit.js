@@ -3,29 +3,15 @@ import { updateNote, removeNote } from "./notes"
 
 const titleElement = document.querySelector('#note-title')
 const bodyElement = document.querySelector('#note-body')
-const saveElement = document.querySelector('#save-note')
+const editElement = document.querySelector('#edit-note')
 const removeElement = document.querySelector('#remove-note')
 const notesElement = document.querySelector('#notes')
 const dateElement = document.querySelector('#last-edited')
 const noteId = location.hash.substring(1)
-// const note
 
 const note = initializeEditPage(noteId)
 
-// titleElement.addEventListener('input', e => {
-//     const note = updateNote(noteId, {
-//         title: e.target.value
-//     })
-//     dateElement.textContent = generateLastEdited(note.updatedAt)
-// })
-
-// bodyElement.addEventListener('input', e => {
-//     const note = updateNote(noteId, {
-//         body: e.target.value
-//     })
-//     dateElement.textContent = generateLastEdited(note.updatedAt)
-// })
-saveElement.addEventListener('click', () => {
+editElement.addEventListener('click', () => {
     if (!titleElement.value) {
         alert('Note title could not be empty!')
     } else if (titleElement.value != note.title || bodyElement.value != note.body) {
