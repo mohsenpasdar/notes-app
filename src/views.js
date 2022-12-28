@@ -67,6 +67,7 @@ const initializeEditPage = (noteId) => {
     titleElement.value = note.title
     bodyElement.value = note.body
     dateElement.textContent = generateLastEdited(note.updatedAt)
+    return note
 }
 
 // Generate the last edited message
